@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>G-DEAL 교사 해커톤</title>
+  <meta name="theme-color" content="#66ae7d">
+  <link rel="icon" type="image/png" href="assets/pets/koalbot.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="홈"><img src="assets/gdeal.svg" alt="G-DEAL" width="104" height="18"><span>해커톤</span></a>
+    <nav class="topnav" id="nav" aria-label="메뉴"></nav>
+    <span class="day-chip" id="dayChip"></span>
+    <span class="sync" id="sync" hidden>저장 중</span>
+    <div class="me-box" id="meBox"></div>
+  </header>
+
+  <main class="page" id="view"></main>
+
+  <nav class="bottomnav" id="bottomNav" aria-label="메뉴"></nav>
+  <div class="draft" id="draft"></div>
+  <div id="modal"></div>
+  <div class="toast-root" id="toast" aria-live="polite"></div>
+
+  <!-- 순서대로 불러온다. 앞 파일이 만든 HB.* 를 뒤 파일이 쓴다 -->
+  <script src="js/config.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/sample-data.js"></script>
+  <script src="js/ops.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js/actions.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/ideas.js"></script>
+  <script src="js/views/teams.js"></script>
+  <script src="js/views/team.js"></script>
+  <script src="js/views/feed.js"></script>
+  <script src="js/archive-export.js"></script>
+  <script src="js/views/archive.js"></script>
+  <script src="js/views/guide.js"></script>
+  <script src="js/views/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+node_modules/
+_site/
+.claude/
+.clasp.json
+.clasprc.json
+.env
+.env.*
+!.env.example
+tests/artifacts/
+__pycache__/
+*.pyc
+*.zip
+.DS_Store
+Thumbs.db

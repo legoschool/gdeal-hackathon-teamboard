@@ -1,0 +1,18 @@
+{
+  "name": "gdeal-hackathon-teamboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "G-DEAL teacher hackathon team board",
+  "scripts": {
+    "test": "node --test tests/core.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "build": "python tools/build_gas.py",
+    "build:pages": "python tools/build_pages.py"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

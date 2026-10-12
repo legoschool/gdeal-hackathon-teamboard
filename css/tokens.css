@@ -1,0 +1,68 @@
+/* 디자인 값. 몬스터 원정대(legoschool.github.io/hanmadang-monster-battle) 첫 화면과
+   gdeal.io에서 가져온 색·글꼴·모서리. 색을 바꾸려면 이 파일만 고친다. */
+
+@font-face { font-family: 'Paperlogy'; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 500; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 600; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 700; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 800; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2'); }
+
+:root {
+  /* 글자 */
+  --ink: #17382e;          /* 몬스터 원정대 본문 */
+  --ink-2: #31543b;
+  --ink-3: #5b7462;
+  --ink-4: #8a9e8f;
+
+  /* 지딜 초록 */
+  --green: #66ae7d;        /* gdeal.io 주색 */
+  --green-700: #497e56;
+  --green-btn: #277849;    /* '참여하기' 버튼 */
+  --green-btn-line: #245237;
+  --green-btn-shadow: #153e29;
+  --green-brand: #21754b;  /* 표지 G-DEAL 글자 */
+  --green-50: #f1f8f3;
+  --green-100: #e4ead8;
+  --teal: #4ecdc4;
+
+  /* 노란 버튼('이어서 플레이') */
+  --gold: #f3cf69;
+  --gold-line: #cfad4c;
+  --gold-shadow: #ba983d;
+  --gold-ink: #284b32;
+
+  /* 어두운 게임 화면 */
+  --screen: #102b23;
+  --screen-2: #173a2f;
+  --screen-line: #234b35;
+  --screen-shadow: #b6c59c;
+  --screen-ink: #e3f2e7;
+  --screen-dim: #8fb39c;
+  --screen-hi: #a6efc0;
+
+  /* 판과 선 */
+  --page-bg: linear-gradient(145deg, #f4f8e9 0%, #fff9e7 52%, #e8f4e9 100%);
+  --hero-bg: linear-gradient(120deg, rgba(255, 254, 247, 0.92), rgba(230, 240, 217, 0.92));
+  --card: rgba(255, 255, 255, 0.8);
+  --card-solid: #fff;
+  --line: #c8d9bb;
+  --line-soft: #dfe9d5;
+  --red: #d9473a;
+
+  /* 모서리와 그림자 */
+  --r-sm: 10px;
+  --r: 16px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+  --pill: 999px;
+  --shadow-hero: 0 12px 0 -5px rgba(196, 214, 180, 0.5), 0 24px 44px rgba(38, 72, 45, 0.04);
+  --shadow-card: 0 6px 0 -3px rgba(196, 214, 180, 0.45);
+  --shadow-pop: 0 18px 40px rgba(23, 56, 46, 0.18);
+
+  /* 글꼴 */
+  --font: 'Paperlogy', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --pixel: 'Galmuri11', 'Paperlogy', monospace;
+
+  --page-w: 1180px;
+  --top-h: 64px;
+}
