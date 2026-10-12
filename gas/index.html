@@ -325,7 +325,7 @@ img { max-width: 100%; }
 .field__label em { font-style: normal; font-size: 11px; color: var(--red); margin-left: 4px; }
 .field__hint { font-size: 12px; color: var(--ink-4); }
 input[type="text"], input[type="url"], input[type="search"], input[type="email"], input:not([type]), select, textarea {
-  width: 100%; min-height: 42px;
+  width: 100%; min-width: 0; max-width: 100%; min-height: 42px;
   padding: 9px 12px;
   border: 1.5px solid var(--line); border-radius: 12px;
   background: #fff; font-size: 15px; line-height: 1.5;
@@ -409,7 +409,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--g
   .page { padding-bottom: 110px; }
   .draft { bottom: calc(72px + env(safe-area-inset-bottom)); left: 12px; right: auto; align-items: flex-start; }
   .toast-root { bottom: 90px; }
-  .cols, .split { grid-template-columns: 1fr; }
+  .cols, .split { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .topbar { gap: 10px; padding: 0 14px; }
@@ -633,7 +633,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--g
 .team-hero__idea { font-size: 14px; color: var(--ink-3); }
 .team-hero__idea a { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--c) 60%, white); text-underline-offset: 3px; }
 .team-hero .party { padding: 8px 0 0; }
-.team-hero__btns { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.team-hero__btns { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 4px; }
 .team-hero__steps { padding: 14px 16px; border-radius: 16px; background: var(--screen); color: var(--screen-ink); border: 3px solid var(--screen-line); box-shadow: 0 6px 0 var(--screen-shadow); }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
 .steps li { display: grid; grid-template-columns: 14px 1fr; column-gap: 8px; align-items: center; }
@@ -795,11 +795,11 @@ input.search { width: min(320px, 100%); }
   .track__lv { grid-column: 2; grid-row: 1; }
   .howto-steps { grid-template-columns: repeat(2, 1fr); }
   .idea-grid, .team-grid, .arc-grid { grid-template-columns: 1fr; }
-  .team-hero { grid-template-columns: 1fr; text-align: left; padding: 18px; }
+  .team-hero { grid-template-columns: minmax(0, 1fr); text-align: left; padding: 18px; }
   .team-hero__pet { flex-direction: row; justify-content: flex-start; }
   .team-hero__pet .pet { height: 80px; }
   .team-hero h1 { font-size: 26px; }
-  .steps { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pet-pick { grid-template-columns: repeat(3, 1fr); }
   .roles-edit label { grid-template-columns: auto 1fr; }
   .roles-edit label input { grid-column: 1 / -1; }

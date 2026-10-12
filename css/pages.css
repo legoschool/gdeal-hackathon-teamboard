@@ -203,7 +203,7 @@
 .team-hero__idea { font-size: 14px; color: var(--ink-3); }
 .team-hero__idea a { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--c) 60%, white); text-underline-offset: 3px; }
 .team-hero .party { padding: 8px 0 0; }
-.team-hero__btns { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.team-hero__btns { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 4px; }
 .team-hero__steps { padding: 14px 16px; border-radius: 16px; background: var(--screen); color: var(--screen-ink); border: 3px solid var(--screen-line); box-shadow: 0 6px 0 var(--screen-shadow); }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
 .steps li { display: grid; grid-template-columns: 14px 1fr; column-gap: 8px; align-items: center; }
@@ -365,11 +365,11 @@ input.search { width: min(320px, 100%); }
   .track__lv { grid-column: 2; grid-row: 1; }
   .howto-steps { grid-template-columns: repeat(2, 1fr); }
   .idea-grid, .team-grid, .arc-grid { grid-template-columns: 1fr; }
-  .team-hero { grid-template-columns: 1fr; text-align: left; padding: 18px; }
+  .team-hero { grid-template-columns: minmax(0, 1fr); text-align: left; padding: 18px; }
   .team-hero__pet { flex-direction: row; justify-content: flex-start; }
   .team-hero__pet .pet { height: 80px; }
   .team-hero h1 { font-size: 26px; }
-  .steps { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pet-pick { grid-template-columns: repeat(3, 1fr); }
   .roles-edit label { grid-template-columns: auto 1fr; }
   .roles-edit label input { grid-column: 1 / -1; }

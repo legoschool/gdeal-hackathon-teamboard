@@ -77,6 +77,10 @@ const server=http.createServer((req,res)=>{
   for(const route of ['#/','#/team/t01/log','#/archive','#/admin/settings']){
     await page.evaluate(r=>location.hash=r,route);await page.waitForTimeout(120);
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
+    if (overflow) {
+      await page.screenshot({path:path.join(artifacts,'overflow.png'),fullPage:true});
+      console.error(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1).map(e=>({tag:e.tagName,cls:e.className,width:e.getBoundingClientRect().width,right:e.getBoundingClientRect().right})).slice(0,30)));
+    }
     assert.equal(overflow,false,'mobile overflow '+route);
   }
   await page.screenshot({path:path.join(artifacts,'admin-mobile.png'),fullPage:true});

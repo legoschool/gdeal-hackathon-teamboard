@@ -231,7 +231,7 @@ img { max-width: 100%; }
 .field__label em { font-style: normal; font-size: 11px; color: var(--red); margin-left: 4px; }
 .field__hint { font-size: 12px; color: var(--ink-4); }
 input[type="text"], input[type="url"], input[type="search"], input[type="email"], input:not([type]), select, textarea {
-  width: 100%; min-height: 42px;
+  width: 100%; min-width: 0; max-width: 100%; min-height: 42px;
   padding: 9px 12px;
   border: 1.5px solid var(--line); border-radius: 12px;
   background: #fff; font-size: 15px; line-height: 1.5;
@@ -315,7 +315,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--g
   .page { padding-bottom: 110px; }
   .draft { bottom: calc(72px + env(safe-area-inset-bottom)); left: 12px; right: auto; align-items: flex-start; }
   .toast-root { bottom: 90px; }
-  .cols, .split { grid-template-columns: 1fr; }
+  .cols, .split { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .topbar { gap: 10px; padding: 0 14px; }
